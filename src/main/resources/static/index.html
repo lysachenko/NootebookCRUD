@@ -10,7 +10,7 @@
 
 <body>
 <nav class="navbar navbar-dark bg-dark" style="margin-bottom: 30px">
-    <a class="navbar-brand">HW#20 Spring Data</a>
+    <a class="navbar-brand">Notebook CRUD</a>
 </nav>
 
 <div class="m-2 p-2">
@@ -119,16 +119,18 @@
     function deleteNotebook(btn) {
         let row = btn.parentNode.parentNode;
         let notebookId = row.firstChild.textContent
-        $.ajax({
-            type: "DELETE",
-            url: baseUrl + "/" + notebookId,
-            success: function (data) {
-                row.parentNode.removeChild(row);
-            },
-            error: function (data) {
-                console.log('Error:', data);
-            }
-        });
+        if(confirm("Are you sure?")){
+            $.ajax({
+                type: "DELETE",
+                url: baseUrl + "/" + notebookId,
+                success: function (data) {
+                    row.parentNode.removeChild(row);
+                },
+                error: function (data) {
+                    console.log('Error:', data);
+                }
+            });
+        }
     }
 
     getNotebooks();
