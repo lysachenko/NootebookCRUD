@@ -1,3 +1,3 @@
-# HW20_SpringData
+# Notebook CRUD
 
-Start application and open browser on http://localhost:8089/
+Start application and open browser on http://localhost:5000/
