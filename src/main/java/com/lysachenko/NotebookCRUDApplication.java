@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Hw20SpringDataApplication {
+public class NotebookCRUDApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Hw20SpringDataApplication.class, args);
+        SpringApplication.run(NotebookCRUDApplication.class, args);
     }
 }
